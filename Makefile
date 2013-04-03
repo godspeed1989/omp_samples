@@ -2,8 +2,8 @@ CC=g++
 LIBS=-fopenmp
 CPPFLAGS=-fopenmp -Wall -O2
 ARGS=
-
-TARGET=Refer
+# target as the input
+TARGET=
 
 SOURCES+=$(TARGET).cpp
 
