@@ -28,11 +28,14 @@ int main()
 	}
 	
 	printf("+++++Parallel for\n");
+	int sum = 0;
 	#pragma omp parallel for
 	for(int i=0; i<4; i++)
 	{
+		sum += i;
 		printf("i=%d, TID=%d\n", i, omp_get_thread_num());
 	}
+	printf("sum is %d\n", sum);
 	
 	printf("+++++Parallel if\n");
 	int n = 11;
